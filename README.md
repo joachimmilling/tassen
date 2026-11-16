@@ -16,6 +16,17 @@ For search engines, every kindergarten also has a small static page in `b/<slug>
 `r/ledige-barnehageplasser-oslo/` and the RSS feed `vacancies.xml`. `data/kindergartens.json` is the index it
 matches names against. `deadlines.ics` holds the application deadline with reminders.
 
+## For AI assistants
+
+`llms.txt` describes the site for AI assistants, including a link format that opens the app with a parent's setup
+already filled in (`#home=…&work=…&born=…&prio=…`; read by `applySetup` in `index.html` and cleared from the address
+bar once read). `data/kindergarten-facts.json` has the key facts per kindergarten with English field names.
+
+## English version
+
+`en/` holds the English pages. `en/index.html` is the same app with a small translator that rewrites the Norwegian
+interface as it renders; text written by the kindergartens and municipalities stays in Norwegian.
+
 ## Data sources
 
 | Source | Used for | License |
