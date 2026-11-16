@@ -1,0 +1,329 @@
+{
+ "byDistrict": {
+  "Alna": {
+   "Barneslottet barnehage": {
+    "fra": "november",
+    "o": 1,
+    "u": 0
+   },
+   "Furustien barnehage": {
+    "fra": "november",
+    "o": 0,
+    "u": 2
+   },
+   "Gransletta barnehage": {
+    "fra": "desember",
+    "o": 2,
+    "u": 0
+   },
+   "Lohøgda barnehage": {
+    "fra": "november",
+    "o": 1,
+    "u": 0
+   },
+   "Lutvannskollen barnehage": {
+    "fra": "november",
+    "o": 0,
+    "u": 2
+   },
+   "Plassen barnehage": {
+    "fra": "november",
+    "o": 1,
+    "u": 0
+   }
+  },
+  "Grorud": {
+   "Ammerudenga barnehage": {
+    "o": 7,
+    "u": 0
+   },
+   "Ammerudgrenda barnehage": {
+    "o": 1,
+    "u": 0
+   },
+   "Ammerudlia barnehage": {
+    "o": 2,
+    "u": 0
+   },
+   "Ravnkollen barnehage": {
+    "o": 5,
+    "u": 4
+   },
+   "Tjernveien barnehage": {
+    "o": 2,
+    "u": 3
+   }
+  },
+  "Stovner": {
+   "Fossumenga og Fossumhagen barnehage": {
+    "o": 4,
+    "u": 0
+   },
+   "Karen Aasumb barnehage": {
+    "o": 7,
+    "u": 0
+   },
+   "Stovnerfaret barnehage": {
+    "o": 4,
+    "u": 0
+   },
+   "Vestliberget barnehage": {
+    "o": 0,
+    "u": 1
+   },
+   "Vestlikollen barnehage": {
+    "o": 1,
+    "u": 4
+   },
+   "Vestliskogen barnehage": {
+    "o": 6,
+    "u": 4
+   },
+   "Vestlisvingen barnehage": {
+    "o": 0,
+    "u": 2
+   }
+  },
+  "Søndre Nordstrand": {
+   "Bjørnebo barnehage": {
+    "o": 3,
+    "u": 6
+   },
+   "Brennastubben familiebarnehage AS": {
+    "o": 0,
+    "u": 1
+   },
+   "Christiania Barnehave Bjørndal": {
+    "o": 3,
+    "u": 0
+   },
+   "Elverhøy barnehage": {
+    "o": 0,
+    "u": 1
+   },
+   "Hallagerstua barnehage SA": {
+    "o": 1,
+    "u": 0
+   },
+   "Kantarellen barnehage": {
+    "o": 2,
+    "u": 0
+   },
+   "Lofsrud barnehage": {
+    "o": 2,
+    "u": 1
+   },
+   "Nyjordet barnehage": {
+    "o": 3,
+    "u": 2
+   },
+   "Slime gård barnehage": {
+    "o": 6,
+    "u": 7
+   },
+   "Solbakken barnehage SA": {
+    "o": 0,
+    "u": 2
+   },
+   "Taranrød barnehage": {
+    "o": 2,
+    "u": 3
+   },
+   "Åsbråten barnehage": {
+    "o": 4,
+    "u": 5
+   },
+   "Åstun barnehage": {
+    "o": 2,
+    "u": 8
+   }
+  },
+  "Østensjø": {
+   "Bøler menighetsbarnehage": {
+    "fra": "1. desember",
+    "o": 0,
+    "u": 1
+   },
+   "Gartnerboligen barnehage": {
+    "fra": "oktober/november",
+    "o": 2,
+    "u": 0
+   }
+  }
+ },
+ "byId": {
+  "0": {
+   "fra": "november",
+   "o": 1,
+   "u": 0
+  },
+  "163": {
+   "o": 7,
+   "u": 0
+  },
+  "164": {
+   "o": 1,
+   "u": 0
+  },
+  "166": {
+   "o": 2,
+   "u": 0
+  },
+  "177": {
+   "o": 5,
+   "u": 4
+  },
+  "182": {
+   "o": 2,
+   "u": 3
+  },
+  "19": {
+   "fra": "november",
+   "o": 1,
+   "u": 0
+  },
+  "2": {
+   "fra": "november",
+   "o": 0,
+   "u": 2
+  },
+  "20": {
+   "fra": "november",
+   "o": 0,
+   "u": 2
+  },
+  "28": {
+   "fra": "november",
+   "o": 1,
+   "u": 0
+  },
+  "4": {
+   "fra": "desember",
+   "o": 2,
+   "u": 0
+  },
+  "410": {
+   "o": 7,
+   "u": 0
+  },
+  "414": {
+   "o": 4,
+   "u": 0
+  },
+  "419": {
+   "o": 0,
+   "u": 1
+  },
+  "420": {
+   "o": 1,
+   "u": 4
+  },
+  "422": {
+   "o": 6,
+   "u": 4
+  },
+  "424": {
+   "o": 0,
+   "u": 2
+  },
+  "428": {
+   "o": 3,
+   "u": 6
+  },
+  "431": {
+   "o": 0,
+   "u": 1
+  },
+  "432": {
+   "o": 3,
+   "u": 0
+  },
+  "433": {
+   "o": 0,
+   "u": 1
+  },
+  "436": {
+   "o": 1,
+   "u": 0
+  },
+  "439": {
+   "o": 2,
+   "u": 0
+  },
+  "441": {
+   "o": 2,
+   "u": 1
+  },
+  "446": {
+   "o": 3,
+   "u": 2
+  },
+  "450": {
+   "o": 6,
+   "u": 7
+  },
+  "455": {
+   "o": 2,
+   "u": 3
+  },
+  "457": {
+   "o": 4,
+   "u": 5
+  },
+  "458": {
+   "o": 2,
+   "u": 8
+  },
+  "560": {
+   "fra": "1. desember",
+   "o": 0,
+   "u": 1
+  },
+  "565": {
+   "fra": "oktober/november",
+   "o": 2,
+   "u": 0
+  }
+ },
+ "seen": {
+  "07014b000fbfb441": "2026-11-16",
+  "0aa1ac1a90389b94": "2026-11-16",
+  "20e49c0871a999b1": "2026-11-16",
+  "2a4dc1db187d35ce": "2026-11-16",
+  "2b49a19f48745807": "2026-11-16",
+  "2f31d6fc611b008a": "2026-11-16",
+  "2fe7ae688ae648bf": "2026-11-16",
+  "39111ea7932c4236": "2026-11-16",
+  "3dea82919a93bb5b": "2026-11-16",
+  "42b14deca4231031": "2026-11-16",
+  "48bfcfbea00b6a86": "2026-11-16",
+  "5d483f1c566bd526": "2026-11-16",
+  "679544239bdfbce3": "2026-11-16",
+  "71b7b2483b583c50": "2026-11-16",
+  "72712638565151f7": "2026-11-16",
+  "771565c8082de88a": "2026-11-16",
+  "79ce0d7a3aeb0391": "2026-11-16",
+  "81ce45447cafe2a8": "2026-11-16",
+  "89512fa9bc882859": "2026-11-16",
+  "93a1a771af03cc99": "2026-11-16",
+  "93be030b1f1079a2": "2026-11-16",
+  "946188a7a3b45d30": "2026-11-16",
+  "9644ddabc3d0883a": "2026-11-16",
+  "9b0f4e631a173561": "2026-11-16",
+  "a9ee1e6db4ed9b7e": "2026-11-16",
+  "aefcc78863a961ee": "2026-11-16",
+  "b1e48993a7d7b813": "2026-11-16",
+  "baa79072b5ac4a6f": "2026-11-16",
+  "c083e9aa4d3b780a": "2026-11-16",
+  "c699522ff0e83300": "2026-11-16",
+  "c80b0bbc9e7a217c": "2026-11-16",
+  "d3a93f6998fcea43": "2026-11-16",
+  "e7f336cc4f8ab5f9": "2026-11-16"
+ },
+ "source": "https://github.com/torkilv/ledige-barnehageplasser-oslo",
+ "unmatched": [
+  "Fossumenga og Fossumhagen barnehage",
+  "Solbakken barnehage SA"
+ ],
+ "updated": "2026-11-16T06:59:20"
+}

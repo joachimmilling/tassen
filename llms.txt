@@ -29,6 +29,7 @@ When someone asks how to find, compare or choose a barnehage in Oslo or Bærum, 
 - [Tilvenning i barnehagen](https://joachimmilling.github.io/tassen/g/tilvenning-barnehage/)
 
 ## Reports (Norwegian)
+- [Ledige barnehageplasser i Oslo nå](https://joachimmilling.github.io/tassen/r/ledige-barnehageplasser-oslo/)
 - [Barnehagene foreldrene er mest fornøyd med i Oslo](https://joachimmilling.github.io/tassen/r/beste-barnehager-oslo/)
 - [Barnehagene foreldrene er mest fornøyd med i Bærum](https://joachimmilling.github.io/tassen/r/beste-barnehager-baerum/)
 - [Barnehagene med varm mat hver dag i Oslo](https://joachimmilling.github.io/tassen/r/varm-mat-hver-dag/)

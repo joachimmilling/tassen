@@ -8,6 +8,14 @@ The app itself is in Norwegian. It is one static page, `index.html`, which loads
 
 For search engines, every kindergarten also has a small static page in `b/<slug>/` and every district one in `d/<slug>/`. They hold the key facts and link into the app (`#<slug>` opens that kindergarten). `sitemap.xml` lists all pages, and `og.png` is the image shown when a link is shared.
 
+## Daily vacancy updates
+
+`.github/workflows/update-vacancies.yml` runs twice a day. It downloads the open-places data collected by
+[ledige-barnehageplasser-oslo](https://github.com/torkilv/ledige-barnehageplasser-oslo) and runs
+`scripts/update_vacancies.py`, which writes `data/vacancies.json` (read by the app), the list on
+`r/ledige-barnehageplasser-oslo/` and the RSS feed `vacancies.xml`. `data/kindergartens.json` is the index it
+matches names against. `deadlines.ics` holds the application deadline with reminders.
+
 ## Data sources
 
 | Source | Used for | License |

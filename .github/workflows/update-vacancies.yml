@@ -1,0 +1,35 @@
+name: Update vacancies
+
+# Refreshes the list of open kindergarten places in Oslo every morning and afternoon (Oslo time),
+# from the public data collected by github.com/torkilv/ledige-barnehageplasser-oslo.
+on:
+  schedule:
+    - cron: "23 5,13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-vacancies
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download source data
+        run: curl -fsSL --retry 3 -o /tmp/source.json https://raw.githubusercontent.com/torkilv/ledige-barnehageplasser-oslo/main/docs/data.json
+      - name: Update data, page and feed
+        run: python3 scripts/update_vacancies.py /tmp/source.json .
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/vacancies.json vacancies.xml r/ledige-barnehageplasser-oslo/index.html
+            git commit -m "Update vacancies"
+            git push
+          fi
