@@ -68,7 +68,7 @@ h2{font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:40px 0 10px}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin:30px 0 0}
 .stat{background:var(--surface);border-radius:16px;padding:14px 14px 12px;min-width:0}
 .stat b{display:block;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue","Segoe UI",Roboto,Arial,sans-serif;font-size:clamp(26px,7.4vw,36px);line-height:1.05;letter-spacing:-.025em;font-weight:700;white-space:nowrap}
-.stat span{display:block;color:var(--muted);font-size:14px;line-height:1.35;margin-top:8px}
+.stat span{display:block;color:var(--muted);font-size:14px;line-height:1.35;margin-top:8px;hyphens:auto;overflow-wrap:break-word}
 .fig{background:var(--surface);border-radius:16px;padding:18px 16px 10px;margin:22px 0 0}
 .fig figcaption b{display:block;font-size:17px}
 .fig figcaption span{display:block;color:var(--muted);font-size:14px;line-height:1.4;margin-top:3px}
@@ -158,6 +158,25 @@ sup a{color:var(--link);text-decoration:none;font-size:11px;font-weight:600;marg
 .seg{display:flex;gap:2px;height:28px;margin:14px 0 4px}
 .seg span{display:flex;align-items:center;padding-left:8px;font-size:13px;font-weight:600;border-radius:4px;white-space:nowrap;min-width:6px;outline:none}
 .seg .s1{background:var(--s1);color:var(--s1-ink)} .seg .s2{background:var(--s2);color:var(--s2-ink)} .seg .s3{background:var(--s3);color:var(--s3-ink)}
+.tbox{display:block;background:var(--ink);color:var(--bg);border-radius:18px;padding:20px 20px 18px;margin:30px 0 0}
+.tbox b{display:block;font-size:19px;letter-spacing:-.01em;margin-bottom:6px}
+.tbox p{margin:0;max-width:none;opacity:.86;line-height:1.5}
+.tbox ol{margin:12px 0 0;padding-left:22px}
+.prose .tbox li{max-width:none;margin:6px 0}
+.tbox .btn{display:inline-block;margin-top:16px;background:var(--bg);color:var(--ink)}
+.faq{display:grid;gap:10px;margin-top:12px}
+.qa{background:var(--surface);border-radius:16px;padding:16px}
+.prose .qa h3{margin:0 0 6px;font-size:16px}
+.qa p{margin:0;color:var(--muted);line-height:1.5;max-width:none}
+.cmp{overflow-x:auto;margin-top:14px;background:var(--surface);border-radius:16px;padding:6px 16px}
+.cmp table{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+.cmp th,.cmp td{padding:11px 6px;text-align:right;box-shadow:inset 0 -.5px 0 var(--sep)}
+.cmp tr:last-child td{box-shadow:none}
+.cmp th{color:var(--muted);font-weight:500;font-size:13px}
+.cmp td:first-child,.cmp th:first-child{text-align:left;padding-left:0}
+.cmp td:not(:first-child){font-weight:600;white-space:nowrap}
+.ql{margin:4px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+.prose .ql li{margin:5px 0}
 .tip{position:fixed;z-index:9;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;max-width:260px;line-height:1.3}
 footer{margin-top:56px;color:var(--muted);font-size:13px;line-height:1.5}
 footer a{color:var(--muted)}</style>
@@ -183,7 +202,7 @@ footer a{color:var(--muted)}</style>
 <p class="note"><a href="../../d/alna/">Alle barnehager i Alna</a></p>
 <footer>
 <p>Tall fra Utdanningsdirektoratet (Barnehagefakta og foreldreundersøkelsen), Oslo kommune og Bærum kommune. Sjekk alltid med barnehagen før dere søker.</p>
-<p><a href="../../">Tassen</a> · Finn, sammenlign og prioriter barnehager i Oslo og Bærum. · <a href="../../g/">Guider og rapporter</a></p>
+<p><a href="../../">Tassen</a> · Finn, sammenlign og prioriter barnehager i Oslo og Bærum. · <a href="../../g/">Guider og rapporter</a> · <a href="../../om/">Om Tassen</a></p>
 </footer>
 </div>
 </body>
