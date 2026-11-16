@@ -6,6 +6,8 @@ Find, compare and prioritize kindergartens (barnehager) in Oslo and Bærum.
 
 The app itself is in Norwegian. It is one static page, `index.html`, which loads map tiles, fonts and kindergarten texts from `map/` when they are needed. MapLibre GL JS is loaded from jsDelivr.
 
+For search engines, every kindergarten also has a small static page in `b/<slug>/` and every district one in `d/<slug>/`. They hold the key facts and link into the app (`#<slug>` opens that kindergarten). `sitemap.xml` lists all pages, and `og.png` is the image shown when a link is shared.
+
 ## Data sources
 
 | Source | Used for | License |
