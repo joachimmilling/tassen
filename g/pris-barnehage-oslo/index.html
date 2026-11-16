@@ -21,8 +21,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<style>:root{--bg:#F2F2F7;--surface:#FFFFFF;--ink:#1D1D1F;--muted:#6E6E73;--sep:rgba(60,60,67,.16);--fill:rgba(118,118,128,.12);--hot:#2E9E78;--link:#1E5C48;--chart-muted:#B9C2BD;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#000000;--surface:#1C1C1E;--ink:#F5F5F7;--muted:#98989D;--sep:rgba(255,255,255,.12);--fill:rgba(118,118,128,.24);--hot:#72C9A6;--link:#72C9A6;--chart-muted:#4A524E;color-scheme:dark}}
+<style>:root{--bg:#F2F2F7;--surface:#FFFFFF;--ink:#1D1D1F;--muted:#6E6E73;--sep:rgba(60,60,67,.16);--fill:rgba(118,118,128,.12);--hot:#2E9E78;--link:#1E5C48;--chart-muted:#B9C2BD;--soft:#DCEBE3;--s1:#2E9E78;--s1-ink:#FFFFFF;--s2:#D9A43C;--s2-ink:#1D1D1F;--s3:#C2412B;--s3-ink:#FFFFFF;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#000000;--surface:#1C1C1E;--ink:#F5F5F7;--muted:#98989D;--sep:rgba(255,255,255,.12);--fill:rgba(118,118,128,.24);--hot:#72C9A6;--link:#72C9A6;--chart-muted:#4A524E;--soft:#1D3A30;--s1:#72C9A6;--s1-ink:#0B1A14;--s2:#E3A56A;--s2-ink:#1F1408;--s3:#F08A6E;--s3-ink:#1F0C06;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 .page{max-width:680px;margin:0 auto;padding-block:20px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -124,6 +124,40 @@ h2{font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:40px 0 10px}
 .refs li{margin:8px 0}
 .refs a{color:var(--muted)}
 sup a{color:var(--link);text-decoration:none;font-size:11px;font-weight:600;margin-left:1px}
+.prose .steps{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px;counter-reset:s}
+.prose .steps li{background:var(--surface);border-radius:16px;padding:15px 16px 15px 58px;position:relative;counter-increment:s;max-width:none;margin:0;line-height:1.45}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--hot);color:var(--surface);font-weight:700;font-size:14px;display:grid;place-items:center}
+.callout{background:var(--soft);border-radius:16px;padding:16px 18px;margin:24px 0 0;line-height:1.45}
+.callout b{display:block;margin-bottom:4px}
+.callout a{color:var(--link)}
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:14px 0 0}
+.duo .card{background:var(--surface);border-radius:16px;padding:16px}
+.duo .card b{display:block;font-size:16px;margin-bottom:4px}
+.duo .card p{margin:0;font-size:15px;line-height:1.45;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{background:var(--ink);color:var(--bg);border-radius:980px;padding:12px 22px;font-weight:600;text-decoration:none}
+.btn.alt{background:var(--surface);color:var(--ink)}
+.months{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin-top:14px}
+.mo{border-radius:12px;padding:10px 12px;outline:none;background:var(--surface)}
+.mo span{display:block;font-size:13px;color:var(--muted)}
+.mo b{display:block;font-size:15px;margin-top:2px}
+.mo.a{background:var(--soft)}
+.mo.b{background:var(--hot)} .mo.b span,.mo.b b{color:var(--surface)} .mo.b span{opacity:.85}
+.mo.c{background:var(--fill)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.legend i.ma{background:var(--soft)} .legend i.mb{background:var(--hot)} .legend i.mc{background:var(--fill)}
+.legend i.s1{background:var(--s1)} .legend i.s2{background:var(--s2)} .legend i.s3{background:var(--s3)}
+.ratios{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.ratio{background:var(--surface);border-radius:16px;padding:16px}
+.ratio .pic{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px;max-width:190px}
+.ratio .pic i{width:13px;height:13px;border-radius:50%;background:var(--chart-muted)}
+.ratio .pic i.a{background:var(--hot)}
+.ratio b{display:block;font-size:18px}
+.ratio span{color:var(--muted);font-size:14px}
+.seg{display:flex;gap:2px;height:28px;margin:14px 0 4px}
+.seg span{display:flex;align-items:center;padding-left:8px;font-size:13px;font-weight:600;border-radius:4px;white-space:nowrap;min-width:6px;outline:none}
+.seg .s1{background:var(--s1);color:var(--s1-ink)} .seg .s2{background:var(--s2);color:var(--s2-ink)} .seg .s3{background:var(--s3);color:var(--s3-ink)}
 .tip{position:fixed;z-index:9;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;max-width:260px;line-height:1.3}
 footer{margin-top:56px;color:var(--muted);font-size:13px;line-height:1.5}
 footer a{color:var(--muted)}</style>
@@ -133,27 +167,29 @@ footer a{color:var(--muted)}</style>
 <div class="page">
 <a class="brand" href="../../"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="22 12 78 96"><g fill="var(--hot)"><g transform="translate(42 75) rotate(-14) scale(-1.25 1.25)"><path d="M0-11C7.6-11 11.6-5.6 11.6 1 11.6 7.4 7.4 10.4 6.4 15.4 5.5 20 3.6 23 0 23-3.9 23-6 19.6-6 14.8-6 9.2-10.6 6.2-10.6 0-10.6-6.4-6.8-11 0-11Z"/><circle cx="-6.6" cy="-17.2" r="4.4"/><circle cx="0.6" cy="-19.6" r="3.3"/><circle cx="6.4" cy="-18.4" r="2.8"/><circle cx="10.6" cy="-15" r="2.4"/><circle cx="13.4" cy="-10.6" r="2.1"/></g><g transform="translate(78 45) rotate(14) scale(1.25)"><path d="M0-11C7.6-11 11.6-5.6 11.6 1 11.6 7.4 7.4 10.4 6.4 15.4 5.5 20 3.6 23 0 23-3.9 23-6 19.6-6 14.8-6 9.2-10.6 6.2-10.6 0-10.6-6.4-6.8-11 0-11Z"/><circle cx="-6.6" cy="-17.2" r="4.4"/><circle cx="0.6" cy="-19.6" r="3.3"/><circle cx="6.4" cy="-18.4" r="2.8"/><circle cx="10.6" cy="-15" r="2.4"/><circle cx="13.4" cy="-10.6" r="2.1"/></g></g></svg><span>Tassen</span></a>
 <nav class="crumbs" aria-label="Brødsmuler"><a href="../../">Tassen</a> › <a href="../../g/">Guider og rapporter</a> › Hva koster barnehage i Oslo?</nav>
-<p class="kicker">Guide</p>
+<p class="kicker">Guide · Pris</p>
 <h1>Hva koster barnehage i Oslo?</h1>
-<p class="sub">Oppdatert 16. november 2026</p>
-<div class="prose">
-<p class="lead">En hel barnehageplass i Oslo koster <b>1 200 kroner i måneden</b> (fra 1. august 2026), i både kommunale og private barnehager. Juli er gratis. I tillegg kommer matpenger.</p>
-<h2>Matpenger</h2>
-<ul>
-<li><b>Kommunale barnehager i Oslo:</b> 320 kroner i måneden.</li>
-<li><b>Private barnehager</b> setter prisen selv, men den kan ikke være høyere enn det maten koster. Blant de private i Oslo varierer matpengene fra 100 til 900 kroner, og midt på treet ligger 460 kroner.</li>
-</ul>
-<p>Høye matpenger betyr ofte mer varm mat, men ikke alltid. Se <a href="../../r/varm-mat-hver-dag/">barnehagene som serverer varm mat hver dag</a>.</p>
-<h2>Rabatter</h2>
-<ul>
-<li><b>Søskenrabatt:</b> 30 % for barn nummer to. Barn nummer tre er gratis. Dere trenger ikke søke.</li>
-<li><b>Redusert pris:</b> for husholdninger med samlet inntekt under 220 000 kroner i året.</li>
-<li><b>Gratis kjernetid:</b> inntil 20 gratis timer i uka for barn født 2021–2024 i husholdninger med inntekt under 692 465 kroner.</li>
-</ul>
-<p>Bærum har egne satser for matpenger og redusert betaling. Se <a href="https://www.baerum.kommune.no/tjenester/barnehage/informasjon-til-foreldre/foreldrebetaling/" rel="noopener">Bærum kommune</a>.</p>
-<p class="note">Kilde: <a href="https://www.oslo.kommune.no/barnehage/pris-og-betaling" rel="noopener">Oslo kommune: Pris og betaling</a>. Matpengene i private barnehager er fra Barnehagefakta.</p>
+<p class="dek">En hel plass koster 1 200 kroner i måneden. Det er matpengene som skiller, og de varierer mye mellom de private.</p>
+<p class="byline">Tassen · Oppdatert 16. november 2026</p>
+<div class="prose report">
+<div class="stats"><div class="stat"><b>1 200 kr</b><span>for en hel plass i måneden</span></div><div class="stat"><b>320 kr</b><span>matpenger i kommunale</span></div><div class="stat"><b>Juli</b><span>er gratis</span></div></div>
+<h2>Prisen er lik, maten skiller</h2>
+<p>En hel barnehageplass i Oslo koster 1 200 kroner i måneden (fra 1. august 2026), i både kommunale og private barnehager<sup><a href="#ref-1">1</a></sup>. Det som skiller, er matpengene. De kommunale tar 320 kroner. De private setter prisen selv, men den kan ikke være høyere enn det maten koster<sup><a href="#ref-1">1</a></sup>.</p>
+<figure class="fig"><figcaption><b>Matpenger i private barnehager i Oslo</b><span>Antall barnehager per 100 kroner i måneden (303 private). Grønt er 600 kroner eller mer.</span></figcaption><div class="cols" role="group" aria-label="Matpenger i private barnehager i Oslo"><span class="gl" style="--y:0.0%"><i>0</i></span><span class="gl" style="--y:50.0%"><i>40</i></span><span class="gl" style="--y:100.0%"><i>80</i></span><div class="bars"><div class="col" tabindex="0" data-tip="under 300 kr: 17 barnehager" aria-label="under 300 kr: 17 barnehager" style="--h:21.25%"><span class="bar"></span><span class="xl">&lt;300</span></div><div class="col" tabindex="0" data-tip="300–399 kr: 67 barnehager" aria-label="300–399 kr: 67 barnehager" style="--h:83.75%"><span class="bar"></span><span class="xl">300</span></div><div class="col" tabindex="0" data-tip="400–499 kr: 76 barnehager" aria-label="400–499 kr: 76 barnehager" style="--h:95.00%"><span class="bar"></span><span class="xl">400</span></div><div class="col" tabindex="0" data-tip="500–599 kr: 68 barnehager" aria-label="500–599 kr: 68 barnehager" style="--h:85.00%"><span class="bar"></span><span class="xl">500</span></div><div class="col hi" tabindex="0" data-tip="600–699 kr: 34 barnehager" aria-label="600–699 kr: 34 barnehager" style="--h:42.50%"><span class="bar"></span><span class="xl">600</span></div><div class="col hi" tabindex="0" data-tip="700–799 kr: 28 barnehager" aria-label="700–799 kr: 28 barnehager" style="--h:35.00%"><span class="bar"></span><span class="xl">700</span></div><div class="col hi" tabindex="0" data-tip="800–899 kr: 8 barnehager" aria-label="800–899 kr: 8 barnehager" style="--h:10.00%"><span class="bar"></span><span class="xl">800</span></div><div class="col hi" tabindex="0" data-tip="900 eller mer kr: 5 barnehager" aria-label="900 eller mer kr: 5 barnehager" style="--h:6.25%"><span class="bar"></span><span class="xl">900+</span></div></div></div><details class="tv"><summary>Vis tallene</summary><table><thead><tr><th>Matpenger i måneden</th><th>Private barnehager</th></tr></thead><tbody><tr><td>under 300 kr</td><td>17</td></tr><tr><td>300–399 kr</td><td>67</td></tr><tr><td>400–499 kr</td><td>76</td></tr><tr><td>500–599 kr</td><td>68</td></tr><tr><td>600–699 kr</td><td>34</td></tr><tr><td>700–799 kr</td><td>28</td></tr><tr><td>800–899 kr</td><td>8</td></tr><tr><td>900 eller mer kr</td><td>5</td></tr></tbody></table></details></figure>
+<p>Midt på treet ligger 460 kroner. Høye matpenger betyr ofte mer varm mat: <a href="../../r/varm-mat-hver-dag/">se barnehagene som serverer varm mat hver dag</a>.</p>
+<h2>Rabatter dere kan ha krav på</h2>
+<div class="duo"><div class="card"><b>Søskenrabatt</b><p>30 % for barn nummer to, altså 840 kroner i stedet for 1 200. Barn nummer tre er gratis. Dere trenger ikke søke.</p></div><div class="card"><b>Redusert pris</b><p>For husholdninger med samlet inntekt under 220 000 kroner i året.</p></div><div class="card"><b>Gratis kjernetid</b><p>Inntil 20 gratis timer i uka for barn født 2021–2024 i husholdninger med inntekt under 692 465 kroner.</p></div></div>
+<p>Søknad om redusert pris for nytt barnehageår bør være inne innen 30. juni<sup><a href="#ref-1">1</a></sup>.</p>
+<div class="callout"><b>Bærum</b>Bærum har egne satser for matpenger og redusert betaling<sup><a href="#ref-2">2</a></sup>.</div>
+<h2>Kilder</h2><ol class="refs"><li id="ref-1">Oslo kommune: Pris og betaling for barnehageplass. <a href="https://www.oslo.kommune.no/barnehage/pris-og-betaling" rel="noopener">www.oslo.kommune.no</a></li><li id="ref-2">Bærum kommune: Foreldrebetaling. <a href="https://www.baerum.kommune.no/tjenester/barnehage/informasjon-til-foreldre/foreldrebetaling/" rel="noopener">www.baerum.kommune.no</a></li><li id="ref-3">Barnehagefakta (Utdanningsdirektoratet): matpenger per barnehage. <a href="https://barnehagefakta.no" rel="noopener">barnehagefakta.no</a></li></ol>
 </div>
 <h2>Les også</h2><ul class="links"><li><a href="../../r/varm-mat-hver-dag/">Barnehagene med varm mat hver dag</a></li><li><a href="../../g/soke-barnehageplass/">Slik søker du barnehageplass</a></li></ul>
+<script>(()=>{const t=document.createElement("div");t.className="tip";t.hidden=true;document.body.appendChild(t);
+const show=(el,x,y)=>{t.textContent=el.dataset.tip;t.hidden=false;const r=t.getBoundingClientRect();let L=x-r.width/2,T=y-r.height-12;
+L=Math.max(8,Math.min(innerWidth-r.width-8,L));if(T<8)T=y+18;t.style.left=L+"px";t.style.top=T+"px";};
+document.addEventListener("pointermove",e=>{const el=e.target.closest&&e.target.closest("[data-tip]");if(el)show(el,e.clientX,e.clientY);else t.hidden=true;});
+document.addEventListener("focusin",e=>{const el=e.target.closest&&e.target.closest("[data-tip]");if(!el)return;const r=el.getBoundingClientRect();show(el,r.left+r.width/2,r.top);});
+document.addEventListener("focusout",()=>{t.hidden=true;});})();</script>
 <footer>
 <p>Tall fra Utdanningsdirektoratet (Barnehagefakta og foreldreundersøkelsen), Oslo kommune og Bærum kommune. Sjekk alltid med barnehagen før dere søker.</p>
 <p><a href="../../">Tassen</a> · Finn, sammenlign og prioriter barnehager i Oslo og Bærum. · <a href="../../g/">Guider og rapporter</a></p>

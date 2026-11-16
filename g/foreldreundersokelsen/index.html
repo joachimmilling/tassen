@@ -21,8 +21,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<style>:root{--bg:#F2F2F7;--surface:#FFFFFF;--ink:#1D1D1F;--muted:#6E6E73;--sep:rgba(60,60,67,.16);--fill:rgba(118,118,128,.12);--hot:#2E9E78;--link:#1E5C48;--chart-muted:#B9C2BD;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#000000;--surface:#1C1C1E;--ink:#F5F5F7;--muted:#98989D;--sep:rgba(255,255,255,.12);--fill:rgba(118,118,128,.24);--hot:#72C9A6;--link:#72C9A6;--chart-muted:#4A524E;color-scheme:dark}}
+<style>:root{--bg:#F2F2F7;--surface:#FFFFFF;--ink:#1D1D1F;--muted:#6E6E73;--sep:rgba(60,60,67,.16);--fill:rgba(118,118,128,.12);--hot:#2E9E78;--link:#1E5C48;--chart-muted:#B9C2BD;--soft:#DCEBE3;--s1:#2E9E78;--s1-ink:#FFFFFF;--s2:#D9A43C;--s2-ink:#1D1D1F;--s3:#C2412B;--s3-ink:#FFFFFF;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#000000;--surface:#1C1C1E;--ink:#F5F5F7;--muted:#98989D;--sep:rgba(255,255,255,.12);--fill:rgba(118,118,128,.24);--hot:#72C9A6;--link:#72C9A6;--chart-muted:#4A524E;--soft:#1D3A30;--s1:#72C9A6;--s1-ink:#0B1A14;--s2:#E3A56A;--s2-ink:#1F1408;--s3:#F08A6E;--s3-ink:#1F0C06;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 .page{max-width:680px;margin:0 auto;padding-block:20px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -124,6 +124,40 @@ h2{font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:40px 0 10px}
 .refs li{margin:8px 0}
 .refs a{color:var(--muted)}
 sup a{color:var(--link);text-decoration:none;font-size:11px;font-weight:600;margin-left:1px}
+.prose .steps{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px;counter-reset:s}
+.prose .steps li{background:var(--surface);border-radius:16px;padding:15px 16px 15px 58px;position:relative;counter-increment:s;max-width:none;margin:0;line-height:1.45}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--hot);color:var(--surface);font-weight:700;font-size:14px;display:grid;place-items:center}
+.callout{background:var(--soft);border-radius:16px;padding:16px 18px;margin:24px 0 0;line-height:1.45}
+.callout b{display:block;margin-bottom:4px}
+.callout a{color:var(--link)}
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:14px 0 0}
+.duo .card{background:var(--surface);border-radius:16px;padding:16px}
+.duo .card b{display:block;font-size:16px;margin-bottom:4px}
+.duo .card p{margin:0;font-size:15px;line-height:1.45;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{background:var(--ink);color:var(--bg);border-radius:980px;padding:12px 22px;font-weight:600;text-decoration:none}
+.btn.alt{background:var(--surface);color:var(--ink)}
+.months{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin-top:14px}
+.mo{border-radius:12px;padding:10px 12px;outline:none;background:var(--surface)}
+.mo span{display:block;font-size:13px;color:var(--muted)}
+.mo b{display:block;font-size:15px;margin-top:2px}
+.mo.a{background:var(--soft)}
+.mo.b{background:var(--hot)} .mo.b span,.mo.b b{color:var(--surface)} .mo.b span{opacity:.85}
+.mo.c{background:var(--fill)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.legend i.ma{background:var(--soft)} .legend i.mb{background:var(--hot)} .legend i.mc{background:var(--fill)}
+.legend i.s1{background:var(--s1)} .legend i.s2{background:var(--s2)} .legend i.s3{background:var(--s3)}
+.ratios{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.ratio{background:var(--surface);border-radius:16px;padding:16px}
+.ratio .pic{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px;max-width:190px}
+.ratio .pic i{width:13px;height:13px;border-radius:50%;background:var(--chart-muted)}
+.ratio .pic i.a{background:var(--hot)}
+.ratio b{display:block;font-size:18px}
+.ratio span{color:var(--muted);font-size:14px}
+.seg{display:flex;gap:2px;height:28px;margin:14px 0 4px}
+.seg span{display:flex;align-items:center;padding-left:8px;font-size:13px;font-weight:600;border-radius:4px;white-space:nowrap;min-width:6px;outline:none}
+.seg .s1{background:var(--s1);color:var(--s1-ink)} .seg .s2{background:var(--s2);color:var(--s2-ink)} .seg .s3{background:var(--s3);color:var(--s3-ink)}
 .tip{position:fixed;z-index:9;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;max-width:260px;line-height:1.3}
 footer{margin-top:56px;color:var(--muted);font-size:13px;line-height:1.5}
 footer a{color:var(--muted)}</style>
@@ -133,25 +167,31 @@ footer a{color:var(--muted)}</style>
 <div class="page">
 <a class="brand" href="../../"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="22 12 78 96"><g fill="var(--hot)"><g transform="translate(42 75) rotate(-14) scale(-1.25 1.25)"><path d="M0-11C7.6-11 11.6-5.6 11.6 1 11.6 7.4 7.4 10.4 6.4 15.4 5.5 20 3.6 23 0 23-3.9 23-6 19.6-6 14.8-6 9.2-10.6 6.2-10.6 0-10.6-6.4-6.8-11 0-11Z"/><circle cx="-6.6" cy="-17.2" r="4.4"/><circle cx="0.6" cy="-19.6" r="3.3"/><circle cx="6.4" cy="-18.4" r="2.8"/><circle cx="10.6" cy="-15" r="2.4"/><circle cx="13.4" cy="-10.6" r="2.1"/></g><g transform="translate(78 45) rotate(14) scale(1.25)"><path d="M0-11C7.6-11 11.6-5.6 11.6 1 11.6 7.4 7.4 10.4 6.4 15.4 5.5 20 3.6 23 0 23-3.9 23-6 19.6-6 14.8-6 9.2-10.6 6.2-10.6 0-10.6-6.4-6.8-11 0-11Z"/><circle cx="-6.6" cy="-17.2" r="4.4"/><circle cx="0.6" cy="-19.6" r="3.3"/><circle cx="6.4" cy="-18.4" r="2.8"/><circle cx="10.6" cy="-15" r="2.4"/><circle cx="13.4" cy="-10.6" r="2.1"/></g></g></svg><span>Tassen</span></a>
 <nav class="crumbs" aria-label="Brødsmuler"><a href="../../">Tassen</a> › <a href="../../g/">Guider og rapporter</a> › Slik leser du foreldreundersøkelsen</nav>
-<p class="kicker">Guide</p>
+<p class="kicker">Guide · Tallene</p>
 <h1>Slik leser du foreldreundersøkelsen</h1>
-<p class="sub">Oppdatert 16. november 2026</p>
-<div class="prose">
-<p class="lead">Foreldreundersøkelsen er Utdanningsdirektoratets spørreundersøkelse til foreldre med barn i barnehage. Svarene går fra 1 til 5, der 5 er best. Den er det nærmeste vi kommer en felles karakter for barnehagene.</p>
-<h2>Tallet er høyt nesten overalt</h2>
-<p>Snittet er 4,5 i Oslo og 4,6 i Bærum, og 26 % av barnehagene har 4,8 eller mer. Små forskjeller betyr derfor lite. En barnehage med 4,4 er ikke dårlig, men den ligger lavere enn de fleste andre.</p>
-<h2>Slik leser du tallene</h2>
-<ul>
-<li><b>Se på antall svar.</b> Med få svar kan én forelder flytte snittet mye. I Tassen trekker vi vurderingen mot snittet når det er under 10 svar.</li>
-<li><b>Sammenlign med naboene.</b> Tassen sammenligner hver barnehage med de andre i samme bydel, fordi forskjellene mellom bydeler kan være større enn mellom barnehagene.</li>
-<li><b>Se på det som betyr mest for dere.</b> En barnehage kan ha fornøyde foreldre totalt, men svakere skår på uteområde eller antall voksne.</li>
-<li><b>Ikke alle barnehager er med.</b> 516 av 615 barnehager i Oslo og 118 av 124 i Bærum har svar.</li>
-</ul>
-<h2>Temaene i undersøkelsen</h2>
-<dl class="list"><div class="row"><dt>Fornøyde foreldre</dt><dd>Hvor fornøyde foreldrene er alt i alt. Det er dette tallet Tassen viser først.</dd></div><div class="row"><dt>Glade barn</dt><dd>Om barnet trives i barnehagen.</dd></div><div class="row"><dt>Trygge voksne</dt><dd>Relasjonen mellom barnet og de voksne.</dd></div><div class="row"><dt>Nok voksne</dt><dd>Om det er nok voksne til barna.</dd></div><div class="row"><dt>Lek og læring</dt><dd>Barnets utvikling og læring.</dd></div><div class="row"><dt>Uteområde og lokaler</dt><dd>Inne- og utemiljøet.</dd></div><div class="row"><dt>Kontakt med foreldrene</dt><dd>Informasjon og samarbeid med hjemmet.</dd></div><div class="row"><dt>Henting og levering</dt><dd>Hvordan det oppleves å hente og levere.</dd></div><div class="row"><dt>Barna blir hørt</dt><dd>Om barna får være med og bestemme.</dd></div></dl>
-<p class="note">Kilde: Foreldreundersøkelsen i barnehagen, Utdanningsdirektoratet (Barnehagefakta). Tassen bruker siste tilgjengelige år for hver barnehage.</p>
+<p class="dek">4,6 av 5 høres bra ut, men er nesten akkurat snittet. Slik leser dere tallene, og hva de ikke forteller.</p>
+<p class="byline">Tassen · Oppdatert 16. november 2026</p>
+<div class="prose report">
+<div class="stats"><div class="stat"><b>4,54</b><span>snittet i Oslo</span></div><div class="stat"><b>4,59</b><span>snittet i Bærum</span></div><div class="stat"><b>26 %</b><span>har 4,8 eller mer</span></div></div>
+<h2>Hva er foreldreundersøkelsen?</h2>
+<p>Det er Utdanningsdirektoratets spørreundersøkelse til oss foreldre<sup><a href="#ref-1">1</a></sup>. Vi svarer på en skala fra 1 til 5, der 5 er best. Ikke alle barnehager er med: 516 av 615 i Oslo og 118 av 124 i Bærum har svar.</p>
+<h2>Nesten alle får høye tall</h2>
+<p>Vi foreldre er stort sett fornøyde. Derfor ligger nesten alle barnehagene mellom 4,3 og 5. En barnehage med 4,4 er ikke dårlig, men den ligger lavere enn de fleste andre.</p>
+<figure class="fig"><figcaption><b>Hvor fornøyde er foreldrene?</b><span>Antall barnehager i Oslo og Bærum etter snittet. Grønt er 4,8 eller mer.</span></figcaption><div class="cols" role="group" aria-label="Antall barnehager i Oslo og Bærum etter snittet i foreldreundersøkelsen"><span class="gl" style="--y:0.0%"><i>0</i></span><span class="gl" style="--y:50.0%"><i>50</i></span><span class="gl" style="--y:100.0%"><i>100</i></span><div class="bars"><div class="col" tabindex="0" data-tip="3,5 eller lavere: 1 barnehager" aria-label="3,5 eller lavere: 1 barnehager" style="--h:1.00%"><span class="bar"></span><span class="xl">3,5</span></div><div class="col" tabindex="0" data-tip="3,6: 3 barnehager" aria-label="3,6: 3 barnehager" style="--h:3.00%"><span class="bar"></span><span class="xl"></span></div><div class="col" tabindex="0" data-tip="3,7: 0 barnehager" aria-label="3,7: 0 barnehager" style="--h:0.00%"><span class="bar"></span><span class="xl"></span></div><div class="col" tabindex="0" data-tip="3,8: 8 barnehager" aria-label="3,8: 8 barnehager" style="--h:8.00%"><span class="bar"></span><span class="xl"></span></div><div class="col" tabindex="0" data-tip="3,9: 6 barnehager" aria-label="3,9: 6 barnehager" style="--h:6.00%"><span class="bar"></span><span class="xl"></span></div><div class="col" tabindex="0" data-tip="4,0: 17 barnehager" aria-label="4,0: 17 barnehager" style="--h:17.00%"><span class="bar"></span><span class="xl">4,0</span></div><div class="col" tabindex="0" data-tip="4,1: 21 barnehager" aria-label="4,1: 21 barnehager" style="--h:21.00%"><span class="bar"></span><span class="xl"></span></div><div class="col" tabindex="0" data-tip="4,2: 29 barnehager" aria-label="4,2: 29 barnehager" style="--h:29.00%"><span class="bar"></span><span class="xl"></span></div><div class="col" tabindex="0" data-tip="4,3: 60 barnehager" aria-label="4,3: 60 barnehager" style="--h:60.00%"><span class="bar"></span><span class="xl"></span></div><div class="col" tabindex="0" data-tip="4,4: 66 barnehager" aria-label="4,4: 66 barnehager" style="--h:66.00%"><span class="bar"></span><span class="xl"></span></div><div class="col" tabindex="0" data-tip="4,5: 82 barnehager" aria-label="4,5: 82 barnehager" style="--h:82.00%"><span class="bar"></span><span class="xl">4,5</span></div><div class="col" tabindex="0" data-tip="4,6: 95 barnehager" aria-label="4,6: 95 barnehager" style="--h:95.00%"><span class="bar"></span><span class="vl">95</span><span class="xl"></span></div><div class="col" tabindex="0" data-tip="4,7: 80 barnehager" aria-label="4,7: 80 barnehager" style="--h:80.00%"><span class="bar"></span><span class="xl"></span></div><div class="col hi" tabindex="0" data-tip="4,8: 75 barnehager" aria-label="4,8: 75 barnehager" style="--h:75.00%"><span class="bar"></span><span class="xl"></span></div><div class="col hi" tabindex="0" data-tip="4,9: 55 barnehager" aria-label="4,9: 55 barnehager" style="--h:55.00%"><span class="bar"></span><span class="xl"></span></div><div class="col hi" tabindex="0" data-tip="5,0: 36 barnehager" aria-label="5,0: 36 barnehager" style="--h:36.00%"><span class="bar"></span><span class="xl">5,0</span></div></div></div><details class="tv"><summary>Vis tallene</summary><table><thead><tr><th>Snitt</th><th>Barnehager</th></tr></thead><tbody><tr><td>3,5 eller lavere</td><td>1</td></tr><tr><td>3,6</td><td>3</td></tr><tr><td>3,8</td><td>8</td></tr><tr><td>3,9</td><td>6</td></tr><tr><td>4,0</td><td>17</td></tr><tr><td>4,1</td><td>21</td></tr><tr><td>4,2</td><td>29</td></tr><tr><td>4,3</td><td>60</td></tr><tr><td>4,4</td><td>66</td></tr><tr><td>4,5</td><td>82</td></tr><tr><td>4,6</td><td>95</td></tr><tr><td>4,7</td><td>80</td></tr><tr><td>4,8</td><td>75</td></tr><tr><td>4,9</td><td>55</td></tr><tr><td>5,0</td><td>36</td></tr></tbody></table></details></figure>
+<h2>Slik leser dere tallene</h2>
+<ol class="steps"><li><b>Se på antall svar.</b> Med få svar kan én forelder flytte snittet mye. I Tassen trekker vi vurderingen mot snittet når det er under 10 svar.</li><li><b>Sammenlign med naboene.</b> Forskjellene mellom bydeler kan være større enn mellom barnehagene. Tassen sammenligner derfor hver barnehage med de andre i samme bydel.</li><li><b>Se på det som betyr mest for dere.</b> En barnehage kan ha fornøyde foreldre totalt, men svakere skår på uteområde eller antall voksne.</li><li><b>Husk hva tallet ikke ser.</b> Undersøkelsen måler hvordan vi foreldre opplever barnehagen, ikke kvalitet målt av fagfolk. Forskerne i GoBaN fant store forskjeller i kvalitet, blant annet på samspill og språk<sup><a href="#ref-2">2</a></sup>. Det ser dere best på et besøk.</li></ol>
+<h2>Temaene</h2>
+<div class="duo"><div class="card"><b>Fornøyde foreldre</b><p>Hvor fornøyde foreldrene er alt i alt. Det er tallet Tassen viser først.</p></div><div class="card"><b>Glade barn</b><p>Om barnet trives.</p></div><div class="card"><b>Trygge voksne</b><p>Relasjonen mellom barnet og de voksne.</p></div><div class="card"><b>Nok voksne</b><p>Om det er nok voksne til barna.</p></div><div class="card"><b>Lek og læring</b><p>Barnets utvikling og læring.</p></div><div class="card"><b>Uteområde og lokaler</b><p>Inne- og utemiljøet.</p></div><div class="card"><b>Kontakt med foreldrene</b><p>Informasjon og samarbeid med hjemmet.</p></div><div class="card"><b>Henting og levering</b><p>Hvordan det oppleves å hente og levere.</p></div><div class="card"><b>Barna blir hørt</b><p>Om barna får være med og bestemme.</p></div></div>
+<div class="callout"><b>Se hvem som skiller seg ut</b><a href="../../r/beste-barnehager-oslo/">Barnehagene foreldrene er mest fornøyd med i Oslo</a> og <a href="../../r/beste-barnehager-baerum/">i Bærum</a>.</div>
+<h2>Kilder</h2><ol class="refs"><li id="ref-1">Utdanningsdirektoratet: Foreldreundersøkelsen i barnehagen, tall fra Barnehagefakta. <a href="https://barnehagefakta.no" rel="noopener">barnehagefakta.no</a></li><li id="ref-2">Regjeringen.no: «Nok voksne og barnehagelærere avgjør barnehagekvaliteten», om forskningsprosjektet GoBaN. <a href="https://www.regjeringen.no/no/aktuelt/nok-voksne-og-barnehagelarere-avgjor-barnehagekvaliteten/id2625255/" rel="noopener">www.regjeringen.no</a></li></ol>
 </div>
 <h2>Les også</h2><ul class="links"><li><a href="../../r/beste-barnehager-oslo/">Barnehagene foreldrene er mest fornøyd med i Oslo</a></li><li><a href="../../r/beste-barnehager-baerum/">… og i Bærum</a></li></ul>
+<script>(()=>{const t=document.createElement("div");t.className="tip";t.hidden=true;document.body.appendChild(t);
+const show=(el,x,y)=>{t.textContent=el.dataset.tip;t.hidden=false;const r=t.getBoundingClientRect();let L=x-r.width/2,T=y-r.height-12;
+L=Math.max(8,Math.min(innerWidth-r.width-8,L));if(T<8)T=y+18;t.style.left=L+"px";t.style.top=T+"px";};
+document.addEventListener("pointermove",e=>{const el=e.target.closest&&e.target.closest("[data-tip]");if(el)show(el,e.clientX,e.clientY);else t.hidden=true;});
+document.addEventListener("focusin",e=>{const el=e.target.closest&&e.target.closest("[data-tip]");if(!el)return;const r=el.getBoundingClientRect();show(el,r.left+r.width/2,r.top);});
+document.addEventListener("focusout",()=>{t.hidden=true;});})();</script>
 <footer>
 <p>Tall fra Utdanningsdirektoratet (Barnehagefakta og foreldreundersøkelsen), Oslo kommune og Bærum kommune. Sjekk alltid med barnehagen før dere søker.</p>
 <p><a href="../../">Tassen</a> · Finn, sammenlign og prioriter barnehager i Oslo og Bærum. · <a href="../../g/">Guider og rapporter</a></p>
