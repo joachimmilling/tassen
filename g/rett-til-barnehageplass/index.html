@@ -166,6 +166,17 @@ sup a{color:var(--link);text-decoration:none;font-size:11px;font-weight:600;marg
 .tbox b{display:block;font-size:19px;letter-spacing:-.01em;margin-bottom:6px}
 .tbox p{margin:0;max-width:none;opacity:.86;line-height:1.5}
 .tbox ol{margin:12px 0 0;padding-left:22px}
+.tbox p.only{margin-top:10px;font-size:15px}
+.tbox a:not(.btn){color:inherit;text-decoration:underline;text-underline-offset:2px}
+.fx{overflow-x:auto;margin-top:14px;background:var(--surface);border-radius:16px;-webkit-overflow-scrolling:touch}
+.fx table{border-collapse:collapse;font-size:14px;line-height:1.35;min-width:600px;width:100%}
+.fx th,.fx td{padding:11px 8px;text-align:left;vertical-align:top;box-shadow:inset 0 -.5px 0 var(--sep)}
+.fx tr:last-child td{box-shadow:none}
+.fx thead th{font-size:13px;font-weight:600;color:var(--ink)}
+.fx th[scope=row]{color:var(--muted);font-weight:500;position:sticky;left:0;background:var(--surface);min-width:104px;max-width:120px}
+.fx td.no{color:var(--muted)}
+.fx .us{font-weight:600}
+.fx-note{color:var(--muted);font-size:13px;margin-top:8px}
 .prose .tbox li{max-width:none;margin:6px 0}
 .tbox .btn{display:inline-block;margin-top:16px;background:var(--bg);color:var(--ink)}
 .faq{display:grid;gap:10px;margin-top:12px}
@@ -205,7 +216,7 @@ footer a{color:var(--muted)}</style>
 <h2>Dette må være på plass</h2>
 <ol class="steps"><li><b>Dere må søke.</b> Retten gjelder bare når dere har søkt<sup><a href="#ref-1">1</a></sup>. I Oslo og Bærum må søknaden være inne innen 1. mars 2027 for at plassen skal gjelde fra august<sup><a href="#ref-2">2</a></sup><sup><a href="#ref-3">3</a></sup>.</li><li><b>Barnet må bo i kommunen.</b> Det er kommunen der barnet er bosatt, som har plikten til å gi plass<sup><a href="#ref-1">1</a></sup>.</li><li><b>Retten gjelder en plass i kommunen,</b> ikke i en bestemt barnehage. Derfor lønner det seg å føre opp flere barnehager dere kan leve med.</li></ol>
 <div class="callout"><b>Regn det ut automatisk</b>Legg inn fødselsdatoen i <a href='../../'>Tassen</a>, så ser dere når barnet har rett på plass og hvor mange dager dere har igjen til fristen.</div>
-<aside class="tbox"><b>Gjør det enklere med Tassen</b><p>Tassen er en gratis nettside som samler alle 739 barnehagene i Oslo og Bærum på ett sted. Den har en egen ruteplanlegger som viser turen hjemmefra til barnehagen og videre til jobb, med linjene dere tar, og sorterer barnehagene etter det som betyr mest for dere: reisetid, varm mat, hva foreldrene svarer i foreldreundersøkelsen og sjansen for plass.</p><a class="btn" href="https://joachimmilling.github.io/tassen/">Åpne Tassen</a></aside><h2>Kilder</h2><ol class="refs"><li id="ref-1">Utdanningsdirektoratet: rett til barnehageplass (barnehageloven), slik direktoratet gjengir den. <a href="https://udir.no/api/PdfApi/PrintPageAsPdfDocument/157905" rel="noopener">udir.no</a></li><li id="ref-2">Oslo kommune: Søke barnehageplass. <a href="https://www.oslo.kommune.no/barnehage/soke-barnehageplass" rel="noopener">www.oslo.kommune.no</a></li><li id="ref-3">Bærum kommune: Barnehageplass. <a href="https://www.baerum.kommune.no/tjenester/barnehage/barnehageplass" rel="noopener">www.baerum.kommune.no</a></li></ol>
+<aside class="tbox"><b>Gjør det enklere med Tassen</b><p>Tassen er en gratis nettside som samler alle 739 barnehagene i Oslo og Bærum på ett sted. Den har en egen ruteplanlegger som viser turen hjemmefra til barnehagen og videre til jobb, med linjene dere tar, og sorterer barnehagene etter det som betyr mest for dere: reisetid, varm mat, hva foreldrene svarer i foreldreundersøkelsen og sjansen for plass.</p><p class="only">Så vidt vi vet er Tassen den eneste nettsiden som viser hvilke T-bane-, trikk-, buss- og toglinjer dere tar hjemmefra via barnehagen til jobb for alle barnehagene i både Oslo og Bærum, og den eneste som anslår sjansen for plass for barnehagene i Oslo. <a href="https://joachimmilling.github.io/tassen/g/nettsider-for-a-finne-barnehage/">Se sammenligningen med andre tjenester</a>.</p><a class="btn" href="https://joachimmilling.github.io/tassen/">Åpne Tassen</a></aside><h2>Kilder</h2><ol class="refs"><li id="ref-1">Utdanningsdirektoratet: rett til barnehageplass (barnehageloven), slik direktoratet gjengir den. <a href="https://udir.no/api/PdfApi/PrintPageAsPdfDocument/157905" rel="noopener">udir.no</a></li><li id="ref-2">Oslo kommune: Søke barnehageplass. <a href="https://www.oslo.kommune.no/barnehage/soke-barnehageplass" rel="noopener">www.oslo.kommune.no</a></li><li id="ref-3">Bærum kommune: Barnehageplass. <a href="https://www.baerum.kommune.no/tjenester/barnehage/barnehageplass" rel="noopener">www.baerum.kommune.no</a></li></ol>
 </div>
 <h2>Les også</h2><ul class="links"><li><a href="../../g/soke-barnehageplass/">Slik søker du barnehageplass</a></li><li><a href="../../g/hvem-far-plass-forst/">Hvem får plass først?</a></li></ul>
 <script>(()=>{const t=document.createElement("div");t.className="tip";t.hidden=true;document.body.appendChild(t);
