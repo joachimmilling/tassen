@@ -6,16 +6,6 @@
     "o": 1,
     "u": 0
    },
-   "Furustien barnehage": {
-    "fra": "november",
-    "o": 0,
-    "u": 2
-   },
-   "Gransletta barnehage": {
-    "fra": "desember",
-    "o": 2,
-    "u": 0
-   },
    "Lohøgda barnehage": {
     "fra": "november",
     "o": 1,
@@ -25,11 +15,6 @@
     "fra": "november",
     "o": 0,
     "u": 2
-   },
-   "Plassen barnehage": {
-    "fra": "november",
-    "o": 1,
-    "u": 0
    }
   },
   "Grorud": {
@@ -182,25 +167,10 @@
    "o": 1,
    "u": 0
   },
-  "2": {
-   "fra": "november",
-   "o": 0,
-   "u": 2
-  },
   "20": {
    "fra": "november",
    "o": 0,
    "u": 2
-  },
-  "28": {
-   "fra": "november",
-   "o": 1,
-   "u": 0
-  },
-  "4": {
-   "fra": "desember",
-   "o": 2,
-   "u": 0
   },
   "410": {
    "o": 7,
@@ -293,7 +263,6 @@
   "2b49a19f48745807": "2026-11-16",
   "2f31d6fc611b008a": "2026-11-16",
   "2fe7ae688ae648bf": "2026-11-16",
-  "39111ea7932c4236": "2026-11-16",
   "3dea82919a93bb5b": "2026-11-16",
   "42b14deca4231031": "2026-11-16",
   "48bfcfbea00b6a86": "2026-11-16",
@@ -316,8 +285,6 @@
   "baa79072b5ac4a6f": "2026-11-16",
   "c083e9aa4d3b780a": "2026-11-16",
   "c699522ff0e83300": "2026-11-16",
-  "c80b0bbc9e7a217c": "2026-11-16",
-  "d3a93f6998fcea43": "2026-11-16",
   "e7f336cc4f8ab5f9": "2026-11-16"
  },
  "source": "https://github.com/torkilv/ledige-barnehageplasser-oslo",
@@ -325,5 +292,5 @@
   "Fossumenga og Fossumhagen barnehage",
   "Solbakken barnehage SA"
  ],
- "updated": "2026-11-16T06:59:20"
+ "updated": "2026-11-16T16:52:46"
 }
