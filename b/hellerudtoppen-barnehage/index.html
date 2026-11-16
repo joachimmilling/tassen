@@ -21,8 +21,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<style>:root{--bg:#F2F2F7;--surface:#FFFFFF;--ink:#1D1D1F;--muted:#6E6E73;--sep:rgba(60,60,67,.16);--hot:#2E9E78;--link:#1E5C48;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#000000;--surface:#1C1C1E;--ink:#F5F5F7;--muted:#98989D;--sep:rgba(255,255,255,.12);--hot:#72C9A6;--link:#72C9A6;color-scheme:dark}}
+<style>:root{--bg:#F2F2F7;--surface:#FFFFFF;--ink:#1D1D1F;--muted:#6E6E73;--sep:rgba(60,60,67,.16);--fill:rgba(118,118,128,.12);--hot:#2E9E78;--link:#1E5C48;--chart-muted:#B9C2BD;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#000000;--surface:#1C1C1E;--ink:#F5F5F7;--muted:#98989D;--sep:rgba(255,255,255,.12);--fill:rgba(118,118,128,.24);--hot:#72C9A6;--link:#72C9A6;--chart-muted:#4A524E;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 .page{max-width:680px;margin:0 auto;padding-block:20px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -61,6 +61,70 @@ h2{font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:40px 0 10px}
 .rk{display:inline-block;min-width:1.7em;color:var(--muted);font-variant-numeric:tabular-nums;font-weight:500}
 .row .rk+a{font-weight:500}
 .prose .list .row small{padding-left:0}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--hot);margin:30px 0 10px}
+.kicker+h1{margin-top:0}
+.dek{font-size:20px;line-height:1.42;color:var(--muted);margin:14px 0 0;max-width:60ch}
+.byline{font-size:14px;color:var(--muted);margin:14px 0 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin:30px 0 0}
+.stat{background:var(--surface);border-radius:16px;padding:14px 14px 12px;min-width:0}
+.stat b{display:block;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue","Segoe UI",Roboto,Arial,sans-serif;font-size:clamp(26px,7.4vw,36px);line-height:1.05;letter-spacing:-.025em;font-weight:700;white-space:nowrap}
+.stat span{display:block;color:var(--muted);font-size:14px;line-height:1.35;margin-top:8px}
+.fig{background:var(--surface);border-radius:16px;padding:18px 16px 10px;margin:22px 0 0}
+.fig figcaption b{display:block;font-size:17px}
+.fig figcaption span{display:block;color:var(--muted);font-size:14px;line-height:1.4;margin-top:3px}
+.cols{position:relative;height:190px;margin:22px 0 30px 34px}
+.cols .gl{position:absolute;left:0;right:0;bottom:var(--y);border-top:1px solid var(--sep)}
+.cols .gl i{position:absolute;left:-36px;top:-8px;width:30px;text-align:right;font-style:normal;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.cols .bars{position:absolute;inset:0;display:flex;align-items:flex-end;gap:2px}
+.col{flex:1;height:100%;display:flex;align-items:flex-end;justify-content:center;position:relative;outline:none;min-width:0}
+.col .bar{width:min(24px,80%);height:var(--h);background:var(--chart-muted);border-radius:4px 4px 0 0;transition:filter .15s}
+.col.hi .bar{background:var(--hot)}
+.col:hover .bar,.col:focus-visible .bar{filter:brightness(1.15)}
+.col:focus-visible .bar{outline:2px solid var(--ink);outline-offset:2px}
+.col .vl{position:absolute;bottom:calc(var(--h) + 5px);font-size:12px;font-weight:600;white-space:nowrap}
+.col .xl{position:absolute;bottom:-22px;font-size:11px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.dots{display:grid;gap:0;margin-top:16px}
+.drow{display:grid;grid-template-columns:minmax(0,8.5em) 1fr 2.6em;align-items:center;gap:10px;min-height:30px;outline:none;border-radius:8px;padding:0 4px}
+.drow:hover,.drow:focus-visible{background:var(--fill)}
+.dl{font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dt{position:relative;height:22px}
+.dt::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px solid var(--sep)}
+.dots .dt::after{content:"";position:absolute;left:var(--ref);top:0;bottom:0;border-left:1px solid var(--muted);opacity:.55}
+.dot{position:absolute;left:var(--x);top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--hot);box-shadow:0 0 0 2px var(--surface)}
+.dv{font-size:14px;text-align:right;font-variant-numeric:tabular-nums}
+.daxis{display:grid;grid-template-columns:minmax(0,8.5em) 1fr 2.6em;gap:10px;padding:6px 4px 4px;font-size:11px;color:var(--muted)}
+.daxis span:nth-child(2){position:relative;display:flex;justify-content:space-between;height:16px}
+.daxis i{font-style:normal}
+.daxis .rf{position:absolute;transform:translateX(-50%);white-space:nowrap;color:var(--ink)}
+.tv{margin-top:4px}
+.tv summary{cursor:pointer;color:var(--link);font-size:14px;padding:8px 0}
+.tv table{width:100%;border-collapse:collapse;font-size:14px;margin:4px 0 8px;font-variant-numeric:tabular-nums}
+.tv th,.tv td{text-align:left;padding:7px 4px;box-shadow:inset 0 -.5px 0 var(--sep)}
+.tv th{color:var(--muted);font-weight:500}
+.tv td:not(:first-child),.tv th:not(:first-child){text-align:right}
+.podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:16px 0 10px}
+.pcard{background:var(--surface);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink)}
+.pcard .pt{display:flex;flex-direction:column;gap:4px;min-width:0}
+@media (max-width:560px){.pcard{flex-direction:row;align-items:center;gap:14px}.pcard .pv{margin:0 0 0 auto;padding:0;white-space:nowrap}}
+.pcard .pr{font-size:13px;font-weight:600;color:var(--hot);letter-spacing:.02em}
+.pcard .pn{font-size:18px;font-weight:600;line-height:1.25}
+.pcard .ps{font-size:14px;color:var(--muted)}
+.pcard .pv{margin-top:auto;padding-top:10px;font-size:32px;font-weight:700;letter-spacing:-.02em}
+.pcard .pv small{font-size:14px;color:var(--muted);font-weight:500;letter-spacing:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin-top:14px}
+.mini{background:var(--surface);border-radius:16px;padding:14px 16px 8px}
+.mini h3{margin:0 0 4px;font-size:16px}
+.mini h3 a{color:var(--ink);text-decoration:none}
+.mini ol{list-style:none;margin:0;padding:0}
+.mini li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 0;box-shadow:inset 0 -.5px 0 var(--sep);font-size:15px;max-width:none}
+.mini li:last-child{box-shadow:none}
+.mini li a{color:var(--ink);text-decoration:none;min-width:0}
+.mini li b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.refs{font-size:14px;color:var(--muted);padding-left:22px}
+.refs li{margin:8px 0}
+.refs a{color:var(--muted)}
+sup a{color:var(--link);text-decoration:none;font-size:11px;font-weight:600;margin-left:1px}
+.tip{position:fixed;z-index:9;pointer-events:none;background:var(--ink);color:var(--bg);font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;max-width:260px;line-height:1.3}
 footer{margin-top:56px;color:var(--muted);font-size:13px;line-height:1.5}
 footer a{color:var(--muted)}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ChildCare", "name": "Hellerudtoppen barnehage", "url": "https://joachimmilling.github.io/tassen/b/hellerudtoppen-barnehage/", "address": {"@type": "PostalAddress", "streetAddress": "Hellerudgrenda 52", "postalCode": "0672", "addressLocality": "Oslo", "addressRegion": "Oslo", "addressCountry": "NO"}, "geo": {"@type": "GeoCoordinates", "latitude": 59.910797, "longitude": 10.859893}, "telephone": "+47 48367081", "openingHours": "Mo-Fr 07:45-16:45", "sameAs": ["http://www.hellerudtoppen.barnehageside.no/", "https://www.oslo.kommune.no/barnehage/finn-barnehage-i-oslo/hellerudtoppen-barnehage/", "https://barnehagefakta.no/barnehage/973483617/hellerudtoppen-barnehage"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Tassen", "item": "https://joachimmilling.github.io/tassen/"}, {"@type": "ListItem", "position": 2, "name": "Alna", "item": "https://joachimmilling.github.io/tassen/d/alna/"}, {"@type": "ListItem", "position": 3, "name": "Hellerudtoppen barnehage", "item": "https://joachimmilling.github.io/tassen/b/hellerudtoppen-barnehage/"}]}</script>
