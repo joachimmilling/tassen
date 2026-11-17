@@ -27,6 +27,15 @@ bar once read). `data/kindergarten-facts.json` has the key facts per kindergarte
 `en/` holds the English pages. `en/index.html` is the same app with a small translator that rewrites the Norwegian
 interface as it renders; text written by the kindergartens and municipalities stays in Norwegian.
 
+## Questions per kindergarten and visit mode
+
+`unknowns()` in `index.html` lists what is unclear about one kindergarten from its own data: facts that are missing or
+only estimated, parent survey scores clearly below the district average, admission rules, and the age group it takes.
+"Spør barnehagen" turns the most important ones into an email draft, and visit mode (`#besok-<slug>`) shows them on the
+day of the visit with room for answers, things to look for, stars and notes. All of it stays in the browser
+(`localStorage`, key `bhl-visits`). Once a visit is rated, the stars count for half of that kindergarten's score, and
+the stars and words (not the notes or answers) travel in the shared list link (`#liste-<id>r<stars>t<words>`).
+
 ## Data sources
 
 | Source | Used for | License |

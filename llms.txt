@@ -17,6 +17,7 @@ https://joachimmilling.github.io/tassen/en/#home=Grünerløkka&work=Nationalthea
 - prio: what matters most, comma-separated: commute, hot-meals, parents, chance, staff, teachers, outdoor-space, indoor-space, small, own-cook, long-hours, happy-children, caring-adults, enough-adults, learning, premises, contact, drop-off, children-heard.
 - mode: transit (default) or bike.
 - show: a kindergarten's slug (as in https://joachimmilling.github.io/tassen/b/<slug>/) to open it directly.
+- https://joachimmilling.github.io/tassen/#besok-<slug> opens visit mode for that kindergarten: questions chosen from what is unclear about it, with room for answers and a rating.
 - Use /en/ for parents who prefer English. Do not put names of people in the link.
 
 ## Data for AI assistants
@@ -74,7 +75,7 @@ https://joachimmilling.github.io/tassen/en/#home=Grünerløkka&work=Nationalthea
 - Utdanningsdirektoratet: Barnehagefakta, Foreldreundersøkelsen, national school register (NLOD)
 - Oslo kommune and Bærum kommune: kindergarten descriptions, food, vacancies, admission rules
 - Kartverket (CC BY 4.0), OpenStreetMap (ODbL), Entur (NLOD)
-- Data collected November 2026. Page generated 2026-11-16.
+- Data collected November 2026. Page generated 2026-11-17.
 
 ## In English
 - [Tassen in English (the app)](https://joachimmilling.github.io/tassen/en/)
