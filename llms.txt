@@ -75,7 +75,7 @@ https://joachimmilling.github.io/tassen/en/#home=Grünerløkka&work=Nationalthea
 - Utdanningsdirektoratet: Barnehagefakta, Foreldreundersøkelsen, national school register (NLOD)
 - Oslo kommune and Bærum kommune: kindergarten descriptions, food, vacancies, admission rules
 - Kartverket (CC BY 4.0), OpenStreetMap (ODbL), Entur (NLOD)
-- Data collected November 2026. Page generated 2026-11-17.
+- Data collected November 2026. Page generated 2026-11-18.
 
 ## In English
 - [Tassen in English (the app)](https://joachimmilling.github.io/tassen/en/)

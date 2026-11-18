@@ -36,6 +36,18 @@ day of the visit with room for answers, things to look for, stars and notes. All
 (`localStorage`, key `bhl-visits`). Once a visit is rated, the stars count for half of that kindergarten's score, and
 the stars and words (not the notes or answers) travel in the shared list link (`#liste-<id>r<stars>t<words>`).
 
+## Offline, share cards and bike routes
+
+- `sw.js` (service worker) and `manifest.webmanifest`: the app can be added to the home screen and opens without a
+  connection. Pages and `data/*.json` are network first with the saved copy as fallback; other files are served from
+  the cache and refreshed in the background. The cache name changes with every build.
+- `cards/<slug>.jpg`: a 1200 x 630 share card per kindergarten (name, district and up to three key figures), used as
+  `og:image` on `b/<slug>/`. Sharing a kindergarten from the app links to that page. Cards are re-rendered only when
+  their content changes (`cards/index.json` holds a hash per card).
+- Bike mode: the ranking uses an estimate calibrated against Entur's bike routes (about 5.75 min per straight-line km
+  plus 6 min). On a kindergarten's page the app asks Entur's journey planner for the actual bike or walking route and
+  draws it on the map. Only on the public site; the artifact cannot call other hosts.
+
 ## Data sources
 
 | Source | Used for | License |
