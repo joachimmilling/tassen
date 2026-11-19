@@ -1,7 +1,7 @@
 {
-  "name": "Tassen – barnehager i Oslo og Bærum",
+  "name": "Tassen – barnehager i Oslo og omegn",
   "short_name": "Tassen",
-  "description": "Finn og sammenlign alle barnehagene i Oslo og Bærum.",
+  "description": "Finn og sammenlign alle barnehagene i Oslo, Bærum, Asker, Lillestrøm, Lørenskog og Nordre Follo.",
   "lang": "nb",
   "start_url": "./",
   "scope": "./",

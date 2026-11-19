@@ -133,7 +133,8 @@ def rss(items, updated):
 
 def main(src_path, repo, force=False):
     source = json.load(open(src_path, encoding="utf-8"))
-    kindergartens = json.load(open(os.path.join(repo, "data", "kindergartens.json"), encoding="utf-8"))
+    # the list is Oslo's, so only Oslo kindergartens can match (other municipalities have kindergartens with the same names)
+    kindergartens = [k for k in json.load(open(os.path.join(repo, "data", "kindergartens.json"), encoding="utf-8")) if k.get("ko", "Oslo") == "Oslo"]
     by_district = parse(source)
     if not by_district:
         print("No vacancies parsed; keeping the previous data.")

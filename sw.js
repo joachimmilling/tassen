@@ -1,7 +1,7 @@
 /* Tassen service worker: keeps the app and what it has fetched, so it opens and visit mode works without a connection.
    Pages and data files: network first, with the saved copy as fallback. Other files on the site and the map library:
    the saved copy first, refreshed in the background. Other hosts (such as Entur's routes) are never stored. */
-const V = "tassen-e1e2fb8aef";
+const V = "tassen-5621931dd0";
 const CORE = ["./", "en/", "map/texts.json", "map/plots.json", "manifest.webmanifest", "icon-192.png"];
 const ROOT = new URL("./", self.location).pathname;
 self.addEventListener("install", e => { e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).catch(() => {})); self.skipWaiting(); });

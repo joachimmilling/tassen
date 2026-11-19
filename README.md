@@ -1,10 +1,14 @@
 # Tassen
 
-Find, compare and prioritize kindergartens (barnehager) in Oslo and Bærum.
+Find, compare and prioritize kindergartens (barnehager) in Oslo, Bærum, Asker, Lillestrøm, Lørenskog and Nordre Follo.
 
 **Live:** https://joachimmilling.github.io/tassen/
 
 The app itself is in Norwegian. It is one static page, `index.html`, which loads map tiles, fonts and kindergarten texts from `map/` when they are needed. MapLibre GL JS is loaded from jsDelivr.
+
+Map tiles in `map/u/` are small files so only what is on screen loads: `l9_*` (one zoom 9 tile each), `l10_*` and `l11_*`
+(four tiles each), `a<x>_<y>` (one zoom 12 tile, and outside the towns also its zoom 13 and 14 tiles) and `b<x>_<y>`
+(one zoom 13 tile with its four zoom 14 tiles). `TKEYS` in `index.html` lists the files that exist.
 
 For search engines, every kindergarten also has a small static page in `b/<slug>/` and every district one in `d/<slug>/`. They hold the key facts and link into the app (`#<slug>` opens that kindergarten). `sitemap.xml` lists all pages, and `og.png` is the image shown when a link is shared.
 
@@ -26,6 +30,18 @@ bar once read). `data/kindergarten-facts.json` has the key facts per kindergarte
 
 `en/` holds the English pages. `en/index.html` is the same app with a small translator that rewrites the Norwegian
 interface as it renders; text written by the kindergartens and municipalities stays in Norwegian.
+
+## Municipalities
+
+Oslo (by district), Bærum, Asker, Lillestrøm, Lørenskog and Nordre Follo. Every kindergarten is compared with the others in
+its Oslo district or municipality. For the four municipalities added last there are no descriptions or food texts from
+the municipality, so food shows as not stated (with an estimate from the food fee) and visit mode asks about it. The
+home's municipality comes from the municipal borders, which decides the address rules in "Sjansen for plass".
+The parent survey trend goes back to 2018 for every kindergarten (overall satisfaction, 1 to 5, the same scale every year).
+
+The transit network is the earlier Oslo and Bærum network plus the lines and line patterns that reach the new
+municipalities (night and school buses left out). Neighbouring stops are found on a grid, so setting it up takes a few
+milliseconds even with about 2,400 stops.
 
 ## Questions per kindergarten and visit mode
 
@@ -53,9 +69,9 @@ the stars and words (not the notes or answers) travel in the shared list link (`
 | Source | Used for | License |
 |---|---|---|
 | [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, via [Protomaps](https://protomaps.com) | Map tiles, nature, roads, place names, kindergarten areas | ODbL 1.0 |
-| [Kartverket](https://www.kartverket.no), Matrikkelen eiendomskart teig | Kindergarten plots and outdoor area | CC BY 4.0 |
+| [Kartverket](https://www.kartverket.no), Matrikkelen eiendomskart teig and kommuneinfo | Kindergarten plots, outdoor area and municipal borders | CC BY 4.0 |
 | [Entur](https://developer.entur.no) | Public transport stops and lines | NLOD |
-| [Udir](https://www.udir.no) — Barnehagefakta and the national school register (NSR) | Parent survey, staffing, schools | NLOD 2.0 |
+| [Udir](https://www.udir.no) — Barnehagefakta, statistikkportalen and the national school register (NSR) | Parent survey, staffing, schools | NLOD 2.0 |
 | [Oslo kommune](https://www.oslo.kommune.no) and [Bærum kommune](https://www.baerum.kommune.no) | Prices, food, vacancies, descriptions | See note below |
 | [Noto](https://notofonts.github.io) fonts | Map labels | SIL OFL 1.1 (`map/f/OFL.txt`) |
 
