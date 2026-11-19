@@ -34,9 +34,11 @@ interface as it renders; text written by the kindergartens and municipalities st
 ## Municipalities
 
 Oslo (by district), Bærum, Asker, Lillestrøm, Lørenskog and Nordre Follo. Every kindergarten is compared with the others in
-its Oslo district or municipality. For the four municipalities added last there are no descriptions or food texts from
-the municipality, so food shows as not stated (with an estimate from the food fee) and visit mode asks about it. The
-home's municipality comes from the municipal borders, which decides the address rules in "Sjansen for plass".
+its Oslo district or municipality. In the four municipalities added last, the description, food text and phone come
+from the kindergarten's page at the municipality where it has one (mostly the municipal kindergartens). Without one,
+food shows as not stated (with an estimate from the food fee) and visit mode asks about it. Plots, outdoor area and
+nearby nature are measured the same way as in Oslo and Bærum. Nine kindergartens without a position in Barnehagefakta
+are placed at their address point from Kartverket's address register. The home's municipality comes from the municipal borders, which decides the address rules in "Sjansen for plass".
 The parent survey trend goes back to 2018 for every kindergarten (overall satisfaction, 1 to 5, the same scale every year).
 
 The transit network is the earlier Oslo and Bærum network plus the lines and line patterns that reach the new
@@ -72,10 +74,10 @@ the stars and words (not the notes or answers) travel in the shared list link (`
 | [Kartverket](https://www.kartverket.no), Matrikkelen eiendomskart teig and kommuneinfo | Kindergarten plots, outdoor area and municipal borders | CC BY 4.0 |
 | [Entur](https://developer.entur.no) | Public transport stops and lines | NLOD |
 | [Udir](https://www.udir.no) — Barnehagefakta, statistikkportalen and the national school register (NSR) | Parent survey, staffing, schools | NLOD 2.0 |
-| [Oslo kommune](https://www.oslo.kommune.no) and [Bærum kommune](https://www.baerum.kommune.no) | Prices, food, vacancies, descriptions | See note below |
+| [Oslo kommune](https://www.oslo.kommune.no), [Bærum kommune](https://www.baerum.kommune.no), [Asker](https://www.asker.kommune.no), [Lillestrøm](https://www.lillestrom.kommune.no), [Lørenskog](https://www.lorenskog.kommune.no) and [Nordre Follo](https://www.nordrefollo.kommune.no) kommune | Prices, food, phone, vacancies (Oslo), descriptions | See note below |
 | [Noto](https://notofonts.github.io) fonts | Map labels | SIL OFL 1.1 (`map/f/OFL.txt`) |
 
-The kindergarten descriptions ("Om barnehagen", "Slik jobber vi") come from each kindergarten's page on oslo.kommune.no and baerum.kommune.no. They belong to the kindergartens and the municipalities and are not covered by any license in this repository.
+The kindergarten descriptions ("Om barnehagen", "Slik jobber vi") come from each kindergarten's page on the municipality's website. They belong to the kindergartens and the municipalities and are not covered by any license in this repository.
 
 ## License
 
