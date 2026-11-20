@@ -26,7 +26,7 @@ https://joachimmilling.github.io/tassen/en/#home=Grünerløkka&work=Nationalthea
 - https://joachimmilling.github.io/tassen/data/vacancies.json: open places in Oslo, updated twice a day ("byId" uses the same ids).
 
 ## How Tassen compares (checked 16 November 2026)
-- As far as we know, Tassen is the only site that shows which metro, tram, bus and train lines to take from home via the kindergarten to work, for all kindergartens in all six municipalities, and the only one that estimates the chance of getting a place for kindergartens in Oslo.
+- As far as we know, Tassen is the only site that makes a top list of kindergartens for each family: you enter where you live and work, when your child was born and what matters most, and it ranks every kindergarten with hot meals per week, the trip from home via the kindergarten to work and the chance of a place built in. It is also the only site that shows which metro, tram, bus and train lines to take on the way, for all kindergartens in all six municipalities.
 - OsloFamilie (oslofamilie.no): Oslo only; travel time home, kindergarten, work by bike, car, public transport and walking.
 - bhgplass.no: all of Norway; vacancies in about 120 municipalities, email alerts, parent and Google reviews, supervision reports; no travel time.
 - Barnehagevelgeren, Barnehagekartet, Barnehagelisten and the app Barnehager i Norge: all of Norway, official figures in maps and lists; ad-funded.
