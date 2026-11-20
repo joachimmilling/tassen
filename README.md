@@ -37,13 +37,25 @@ Oslo (by district), Bærum, Asker, Lillestrøm, Lørenskog and Nordre Follo. Eve
 its Oslo district or municipality. In the four municipalities added last, the description, food text and phone come
 from the kindergarten's page at the municipality where it has one (mostly the municipal kindergartens). Without one,
 food shows as not stated (with an estimate from the food fee) and visit mode asks about it. Plots, outdoor area and
-nearby nature are measured the same way as in Oslo and Bærum. Nine kindergartens without a position in Barnehagefakta
+nearby nature are measured the same way as in Oslo and Bærum, with the same checks: where the plot under the point hardly
+overlaps the kindergarten area drawn in OpenStreetMap, is much bigger than it, or is mostly a house, the drawn area is
+used; plots shared with a school, long and narrow plots, and a few found wrong on a map are left out. Nine kindergartens without a position in Barnehagefakta
 are placed at their address point from Kartverket's address register. The home's municipality comes from the municipal borders, which decides the address rules in "Sjansen for plass".
 The parent survey trend goes back to 2018 for every kindergarten (overall satisfaction, 1 to 5, the same scale every year).
 
 The transit network is the earlier Oslo and Bærum network plus the lines and line patterns that reach the new
 municipalities (night and school buses left out). Neighbouring stops are found on a grid, so setting it up takes a few
 milliseconds even with about 2,400 stops.
+
+## Ranking
+
+Each criterion the family picks gives 0 to 100, and the score is their weighted mean. A kindergarten without a parent
+survey counts as 40 on the survey part when other criteria are picked. Travel is scored against the household's own
+shortest trip (home, kindergarten, work): up to 5 minutes more is full score, 35 minutes more is zero, and longer trips
+count against. Two things put a kindergarten below the rest whatever its score: an address rule it can't meet (all of
+Oslo, and municipal kindergartens elsewhere, need an address in that municipality), and a trip more than 45 minutes
+longer than the shortest. Private kindergartens in another municipality outside Oslo lose 10 points, since their articles
+often put the municipality's own children first.
 
 ## Questions per kindergarten and visit mode
 

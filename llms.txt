@@ -79,7 +79,7 @@ https://joachimmilling.github.io/tassen/en/#home=Grünerløkka&work=Nationalthea
 - Utdanningsdirektoratet: Barnehagefakta, Foreldreundersøkelsen, national school register (NLOD)
 - The municipalities (Oslo, Bærum, Asker, Lillestrøm, Lørenskog, Nordre Follo): kindergarten descriptions, food, phone, admission rules; vacancies in Oslo
 - Kartverket (CC BY 4.0), OpenStreetMap (ODbL), Entur (NLOD)
-- Data collected November 2026. Page generated 2026-11-19.
+- Data collected November 2026. Page generated 2026-11-20.
 
 ## In English
 - [Tassen in English (the app)](https://joachimmilling.github.io/tassen/en/)
