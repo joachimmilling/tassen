@@ -6,6 +6,16 @@
     "o": 1,
     "u": 0
    },
+   "Furustien barnehage": {
+    "fra": "desember",
+    "o": 0,
+    "u": 1
+   },
+   "Gransletta barnehage": {
+    "fra": "desember",
+    "o": 1,
+    "u": 0
+   },
    "Lohøgda barnehage": {
     "fra": "november",
     "o": 1,
@@ -167,10 +177,20 @@
    "o": 1,
    "u": 0
   },
+  "2": {
+   "fra": "desember",
+   "o": 0,
+   "u": 1
+  },
   "20": {
    "fra": "november",
    "o": 0,
    "u": 2
+  },
+  "4": {
+   "fra": "desember",
+   "o": 1,
+   "u": 0
   },
   "410": {
    "o": 7,
@@ -258,11 +278,13 @@
  "seen": {
   "07014b000fbfb441": "2026-11-16",
   "0aa1ac1a90389b94": "2026-11-16",
+  "0c96e4ac5eddde0d": "2026-11-28",
   "20e49c0871a999b1": "2026-11-16",
   "2a4dc1db187d35ce": "2026-11-16",
   "2b49a19f48745807": "2026-11-16",
   "2f31d6fc611b008a": "2026-11-16",
   "2fe7ae688ae648bf": "2026-11-16",
+  "3de8ce2b3864799b": "2026-11-28",
   "3dea82919a93bb5b": "2026-11-16",
   "42b14deca4231031": "2026-11-16",
   "48bfcfbea00b6a86": "2026-11-16",
@@ -292,5 +314,5 @@
   "Fossumenga og Fossumhagen barnehage",
   "Solbakken barnehage SA"
  ],
- "updated": "2026-11-27T08:53:46"
+ "updated": "2026-11-28T09:41:41"
 }

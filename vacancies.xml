@@ -5,7 +5,9 @@
 <atom:link href="https://joachimmilling.github.io/tassen/vacancies.xml" rel="self" type="application/rss+xml"/>
 <description>Nye ledige plasser i barnehagene i Oslo, fra bydelenes lister. Oppdateres daglig.</description>
 <language>nb</language>
-<lastBuildDate>Fri, 27 Nov 2026 15:19:58 +0000</lastBuildDate>
+<lastBuildDate>Sat, 28 Nov 2026 14:21:33 +0000</lastBuildDate>
+<item><title>Ledig plass: Gransletta barnehage (Alna)</title><link>https://joachimmilling.github.io/tassen/b/gransletta-barnehage/</link><description>1 plass over 3 år, ledig fra desember.</description><guid isPermaLink="false">3de8ce2b3864799b</guid><pubDate>Sat, 28 Nov 2026 06:00:00 +0000</pubDate></item>
+<item><title>Ledig plass: Furustien barnehage (Alna)</title><link>https://joachimmilling.github.io/tassen/b/furustien-barnehage/</link><description>1 plass under 3 år, ledig fra desember.</description><guid isPermaLink="false">0c96e4ac5eddde0d</guid><pubDate>Sat, 28 Nov 2026 06:00:00 +0000</pubDate></item>
 <item><title>Ledig plass: Åstun barnehage (Søndre Nordstrand)</title><link>https://joachimmilling.github.io/tassen/b/astun-barnehage/</link><description>8 plasser under 3 år og 2 plasser over 3 år.</description><guid isPermaLink="false">20e49c0871a999b1</guid><pubDate>Mon, 16 Nov 2026 06:00:00 +0000</pubDate></item>
 <item><title>Ledig plass: Åsbråten barnehage (Søndre Nordstrand)</title><link>https://joachimmilling.github.io/tassen/b/asbraten-barnehage/</link><description>5 plasser under 3 år og 4 plasser over 3 år.</description><guid isPermaLink="false">a9ee1e6db4ed9b7e</guid><pubDate>Mon, 16 Nov 2026 06:00:00 +0000</pubDate></item>
 <item><title>Ledig plass: Vestlisvingen barnehage (Stovner)</title><link>https://joachimmilling.github.io/tassen/b/vestlisvingen-barnehage/</link><description>2 plasser under 3 år.</description><guid isPermaLink="false">3dea82919a93bb5b</guid><pubDate>Mon, 16 Nov 2026 06:00:00 +0000</pubDate></item>
